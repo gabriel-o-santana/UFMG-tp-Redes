@@ -71,7 +71,6 @@ int main(int argc, char *argv[]) {
 
         if (strncmp(command, "add", 3) == 0) {
             sendMessage(su_socket, REQ_USRADD, command + 4);
-            printf("DEBUG -> ENVIOU.\n");
 
             Message message;
             if (receiveMessage(su_socket, &message) > 0) {
